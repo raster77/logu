@@ -1,0 +1,66 @@
+[
+	{
+		"name": "logback",
+		"pattern": "yyyy-MM-dd HH:mm:ss.SSS"
+	},
+	{
+		"name": "logback-iso",
+		"pattern": "yyyy-MM-ddTHH:mm:ss,SSS"
+	},
+	{
+		"name": "logback-comma",
+		"pattern": "yyyy-MM-dd HH:mm:ss,SSS"
+	},
+	{
+		"name": "iso8601",
+		"pattern": "yyyy-MM-ddTHH:mm:ss.SSS"
+	},
+	{
+		"name": "iso8601-nofrac",
+		"pattern": "yyyy-MM-ddTHH:mm:ss"
+	},
+	{
+		"name": "apache",
+		"pattern": "dd/MMM/yyyy:HH:mm:ss.SSS"
+	},
+	{
+		"name": "apache-common",
+		"pattern": "dd/MMM/yyyy:HH:mm:ss"
+	},
+	{
+		"name": "nginx",
+		"pattern": "yyyy/MM/dd HH:mm:ss"
+	},
+	{
+		"name": "plain",
+		"pattern": "yyyy-MM-dd HH:mm:ss"
+	},
+	{
+		"name": "vmtoolsd",
+		"pattern": "[MMM dd HH:mm:ss.SSS]"
+	},
+	{
+		"name": "syslog",
+		"pattern": "MMM dd HH:mm:ss"
+	},
+	{
+		"name": "redis",
+		"pattern": "dd MMM yyyy HH:mm:ss.SSS"
+	},
+	{
+		"name": "oracle",
+		"pattern": "dd-MMM-yyyy HH:mm:ss"
+	},
+	{
+		"name": "ctime",
+		"pattern": "EEE MMM dd HH:mm:ss yyyy"
+	},
+	{
+		"name": "http-date",
+		"pattern": "EEE, dd MMM yyyy HH:mm:ss"
+	},
+	{
+		"name": "us-12h",
+		"pattern": "MM/dd/yyyy hh:mm:ss a"
+	}
+]
