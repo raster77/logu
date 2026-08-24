@@ -5,6 +5,7 @@
 #include <condition_variable>
 #include <cstdint>
 #include <functional>
+#include <iostream>
 #include <memory>
 #include <mutex>
 #include <thread>
@@ -37,6 +38,16 @@ namespace logutils {
 
   void TerminalView::run() {
     using namespace ftxui;
+
+    // Push the current title onto xterm's title stack and set our own, so
+    // the terminal window/tab reads "logu - the log utils" while the viewer
+    // is running; the guard below pops the saved title back on exit, on
+    // both the normal and the exception path.
+    std::cout << "\x1b[22;0t\x1b]0;logu - the log utils\x07" << std::flush;
+
+    struct TerminalTitleGuard {
+      ~TerminalTitleGuard() { std::cout << "\x1b[23;0t" << std::flush; }
+    } titleGuard;
 
     auto screen = ScreenInteractive::Fullscreen();
     screen.TrackMouse(false);
